@@ -1,0 +1,44 @@
+/* General modal styling */
+.modal-container {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    width: 300px;
+    max-width: 90%;
+}
+
+/* Overlay background (optional but improves usability) */
+.modal-container::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+/* Show modal when targeted */
+.modal-container:target {
+    display: block; /* Show the modal */
+}
+
+/* Close link styling */
+.close-modal {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.close-modal:hover {
+    text-decoration: underline;
+}
